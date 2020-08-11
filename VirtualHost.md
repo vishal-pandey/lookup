@@ -35,3 +35,16 @@ After creating or updating .conf file restart apache server
 ```sh
 sudo service apache2 restart
 ```
+
+### Redirect 301
+
+```
+<VirtualHost *:80>
+	ServerName www.example.com
+	ServerAlias www.example.com example.com
+	RewriteEngine on
+	RewriteCond %{SERVER_NAME} =example.com [OR]
+	RewriteCond %{SERVER_NAME} =www.example.com
+	RewriteRule ^ https://anotherwebsite.com [END,NE,R=permanent]
+</VirtualHost>
+```
