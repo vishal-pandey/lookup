@@ -1,0 +1,5 @@
+# /var/snap/microk8s/current/args/certs.d/192.168.1.50:5000/hosts.toml
+server = "http://192.168.1.50:5000"
+
+[host."http://192.168.1.50:5000"]
+capabilities = ["pull", "resolve"]
