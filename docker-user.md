@@ -1,4 +1,6 @@
 ```
+sudo usermod -aG docker $USER
 newgrp docker
-sudo usermod -a -G docker ubuntu
+groups
+docker ps
 ```
